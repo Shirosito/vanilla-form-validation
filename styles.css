@@ -1,0 +1,116 @@
+/* *** VARIABLES CSS *** */
+:root {
+  /* Colors */
+  --body-color: hsl(215, 32%, 27%);
+  --primary-color: #7A7BA7;
+  --button-color: #3C4FCE;
+  --error-color: #DD1417;
+  --border-color: #4A90E2;
+  --white: hsl(0, 0%, 100%);
+
+  /* Font Size */
+  --body-font: 'Quicksand', Arial, sans-serif;
+  --biggest-font-size: 1.25rem;
+  --normal-font-size: 1.1rem;
+  --small-font-size: 0.95rem;
+  --smaller-font-size: 0.5rem;
+  --letter-spacing: 0.024rem;
+
+  /* Font Weight */
+  /* --font-small: 300; */
+  --font-normal: 400;
+  --font-standard: 500;
+  --font-medium: 600;
+  --font-semibold: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--body-color);
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+  font-size: var(--biggest-font-size);
+}
+
+select,
+input {
+  border: none;
+  font-family: inherit;
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+}
+
+/* *** General Styles *** */
+.main {
+  min-height: 100vh;
+  padding: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* *** FORM *** */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-font-size);
+  padding: var(--normal-font-size);
+  border-radius: var(--small-font-size);
+  border: 2px solid var(--border-color);
+}
+
+.form__dni {
+  padding: var(--smaller-font-size);
+  border-radius: var(--small-font-size);
+}
+
+.form__email {
+  padding: var(--smaller-font-size);
+  border-radius: var(--small-font-size);
+}
+
+.form__provinces {
+  padding: var(--smaller-font-size);
+  border-radius: var(--small-font-size);
+}
+
+.form__provinces:hover {
+  cursor: pointer;
+}
+
+.form__choose {
+  color: gray;
+  font-style: italic;
+}
+
+.form__provinces:focus {
+  background-color: #fff;
+  box-shadow: 0 0 5px #3498db;
+}
+
+.form__submit {
+  text-align: center;
+  background-color: var(--primary-color);
+  margin: var(--smaller-font-size);
+  padding: var(--small-font-size) var(--normal-font-size);
+  border-radius: var(--smaller-font-size);
+}
+
+.form__submit:hover {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--button-color);
+  transition: 0.1s ease-in-out;
+}
+
+/* *** Email error message *** */
+.error-message {
+  color: #F44336;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semibold);
+}

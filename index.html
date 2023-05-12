@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>WagyDev - Validación de Formulario (Vanilla)</title>
+</head>
+
+<body>
+
+  <main class="main">
+    <form action="#" class="form">
+      <label for="cities">Selecciona una ciudad:</label>
+      <select id="cities" class="form__cities" name="city">
+	<option value="" class="form__choose">--Escoge el lugar</option>
+        <option value="cusco">Cusco</option>
+        <option value="trujillo">Trujillo</option>
+      </select>
+      <br>
+
+      <label for="dni">Ingrese su DNI:</label>
+      <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" minlength="8" maxlength="8"
+        title="Por favor, ingrese su número de DNI. Debe tener 8 dígitos en formato numérico." class="form__dni"
+        required pattern="[0-9]{8}" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+      <br>
+
+      <label>Escriba su correo electrónico:</label>
+      <input type="email" name="email" class="form__email" placeholder="Escriba su correo electrónico" required>
+      <p class="error-message"></p>
+      <input type="submit" value="Enviar" class="form__submit">
+    </form>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
